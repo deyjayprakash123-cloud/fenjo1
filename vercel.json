@@ -1,7 +1,13 @@
 {
-  "functions": {
-    "src/app/api/genkit/[[...slug]]/route.ts": {
-      "memory": 2048
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
     }
-  }
+  },
+  "builds": [
+    {
+      "src": "next.config.ts",
+      "use": "@vercel/next"
+    }
+  ]
 }
